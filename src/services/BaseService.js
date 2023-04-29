@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-    baseURL: 'https://api.themoviedb.org/3/',
+    baseURL: process.env.REACT_APP_URL_BASE_API,
     timeout: 1000,
     headers: {'Authorization': `Bearer ${process.env.REACT_APP_TOKEN}`},
 });
