@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 
-export const MovieItem = ({id, title}) => (
+export const MovieItem = ({id, title, poster_path}) => (
 
-    <li> <Link to={`/movies/${id}`}>{title}</Link></li>
+    <div> 
+        <img src={`https://image.tmdb.org/t/p/w200/${poster_path}`}/>
+        {/* <Link to={`/movies/${id}`}>{title}</Link> */}
+    </div>
 );
